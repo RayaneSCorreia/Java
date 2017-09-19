@@ -11,7 +11,7 @@ public class SistemaTeste {
 
 		Endereco endereco = new Endereco();
 		endereco.rua = JOptionPane.showInputDialog("Digite sua rua ");
-		endereco.numero = JOptionPane.showInputDialog("Número: ");
+		endereco.numero = JOptionPane.showInputDialog("N�mero: ");
 		endereco.complemento = JOptionPane.showInputDialog("Complemento: ");
 
 		usuario.endereco = endereco;
@@ -32,28 +32,16 @@ public class SistemaTeste {
 					JOptionPane.showMessageDialog(null, "               Lista vazia!");
 
 				} else {
-					String infoContatos = "Contatos\n";
-					for (int i = 0; i < usuario.contatos.size(); i++) {
-						Contato contato = usuario.contatos.get(i);
-						String infoFavorito = contato.favorito ? "Favorito" : "Não Favorito";
-						infoContatos = infoContatos + "ID " + i + ", " + contato.nome + ", " + contato.telefone + ", "
-								+ infoFavorito + "\n";
-					}
-					JOptionPane.showMessageDialog(null, infoContatos);
+					int contato1 = usuario.contatos.size();
+					usuario.listarContatos(usuario, contato1);
 
 				}
 			} else if (resposta.equals("3")) {
 				if (usuario.contatos.size() == 0) {
 					JOptionPane.showMessageDialog(null, "Não há contatos cadastrados");
 				} else {
-					String favContatos = "Localização enviada para:\n";
-					for (int i = 0; i < usuario.contatos.size(); i++) {
-						Contato contato = usuario.contatos.get(i);
-						if (contato.favorito) {
-							favContatos = favContatos + contato.nome + "\n";
-						}
-						JOptionPane.showMessageDialog(null, favContatos);
-					}
+					int contato1 = usuario.contatos.size();
+					usuario.enviarLocalizacao(usuario, contato1);
 
 				}
 			} else if (resposta.equals("4")) {
