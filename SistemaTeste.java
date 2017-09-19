@@ -11,7 +11,7 @@ public class SistemaTeste {
 
 		Endereco endereco = new Endereco();
 		endereco.rua = JOptionPane.showInputDialog("Digite sua rua ");
-		endereco.numero = JOptionPane.showInputDialog("N�mero: ");
+		endereco.numero = JOptionPane.showInputDialog("Número: ");
 		endereco.complemento = JOptionPane.showInputDialog("Complemento: ");
 
 		usuario.endereco = endereco;
