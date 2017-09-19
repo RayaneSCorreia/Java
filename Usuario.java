@@ -18,14 +18,33 @@ public class Usuario extends Pessoa {
 	}
 
 	public static void obterInfo(Usuario usuario) {
-		JOptionPane.showMessageDialog(null, usuario.nome + "\n" +
-		 usuario.telefone + "\n" + usuario.email + "\n"/* + endereco.rua + "\t n�: "
-		 + endereco.numero + "\t " + endereco.complemento + "\n"*/);
-		 }
+		JOptionPane.showMessageDialog(null, usuario.nome + "\n" + usuario.telefone + "\n" + usuario.email + "\n");
+	}
 
-	
 	public void adicionarContato(Contato contato) {
 		contatos.add(contato);
 	}
 
+	public void listarContatos(Usuario usuario, int contato1) {
+		String infoContatos = "Contatos\n";
+		for (int i = 0; i < contatos.size(); i++) {
+			Contato contato11 = contatos.get(i);
+			String infoFavorito = contato11.favorito ? "Favorito" : "Não Favorito";
+			infoContatos = infoContatos + "ID " + i + ", " + contato11.nome + ", " + contato11.telefone + ", "
+					+ infoFavorito + "\n";
+		}
+		JOptionPane.showMessageDialog(null, infoContatos);
+	}
+
+	public void enviarLocalizacao(Usuario usuario, int contato1) {
+		String favContatos = "Localização enviada para:\n";
+		for (int i = 0; i < usuario.contatos.size(); i++) {
+			Contato contato = usuario.contatos.get(i);
+			if (contato.favorito) {
+				favContatos = favContatos + contato.nome + "\n";
+			}
+
+		}
+		JOptionPane.showMessageDialog(null, favContatos);
+	}
 }
