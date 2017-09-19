@@ -55,6 +55,6 @@ public class SistemaTeste {
 	// Método
 	public static String obterMenu() {
 		return JOptionPane.showInputDialog(
-				"                       Menu\n 1 - Cadastrar\n 2 - Exibir lista de contatos\n 3 - Enviar Localização\n 4 - Informações do Usuario\n 5 - Sair\n");
+	"                       Menu\n 1 - Cadastrar\n 2 - Exibir lista de contatos\n 3 - Enviar Localização\n 4 - Informações do Usuario\n 5 - Sair\n");
 	}
 }
