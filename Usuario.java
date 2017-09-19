@@ -23,10 +23,7 @@ public class Usuario extends Pessoa {
 		 + endereco.numero + "\t " + endereco.complemento + "\n"*/);
 		 }
 
-	//public String obterInfo(String nome, String telefone, String usuario) {
-		//return nome + "\n" + telefone + "\n" + usuario ;
-	//}
-
+	
 	public void adicionarContato(Contato contato) {
 		contatos.add(contato);
 	}
