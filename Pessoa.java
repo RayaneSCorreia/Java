@@ -14,7 +14,7 @@ public class Pessoa {
 	public Pessoa() {
 	}
 
-	public static void obterInfo(Usuario usuario){
+	public static void obterInfo(Usuario usuario) {
 		System.out.println(usuario.nome);
 	}     
 
