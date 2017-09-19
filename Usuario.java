@@ -1,7 +1,6 @@
 package tsaveprojectpoo;
 
 import java.util.ArrayList;
-
 import javax.swing.JOptionPane;
 
 public class Usuario extends Pessoa {
