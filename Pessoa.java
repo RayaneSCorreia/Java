@@ -1,6 +1,5 @@
 package tsaveprojectpoo;
 
-
 public class Pessoa {
 	
 	String nome;
